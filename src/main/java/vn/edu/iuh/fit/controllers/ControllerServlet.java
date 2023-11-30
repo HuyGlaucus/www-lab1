@@ -49,6 +49,9 @@ public class ControllerServlet extends HttpServlet {
                 case "Delete":
                     CRUD(req, resp, "Delete");
                     break;
+                case "Update":
+                    CRUD(req, resp, "Update");
+                    break;
                 case "Permission":
                     permission(req, resp);
                     break;
@@ -202,30 +205,39 @@ public class ControllerServlet extends HttpServlet {
                         resp.getWriter().println("Deletion failed !!!");
                     }
                     break;
-
-                case "UpdateGrant":
-                    String update = req.getParameter("account_id_update");
+                case "Update":
+                    String updateId = req.getParameter("account_id_update");
                     String accountID1 = req.getParameter("account_id");
                     String fullName1 = req.getParameter("full_name");
                     String password1 = req.getParameter("password");
                     String email1 = req.getParameter("email");
                     String phone1 = req.getParameter("phone");
                     int status1 = Integer.parseInt(req.getParameter("status"));
-
-                    if (!update.equals(accountID1)) {
-                        resp.getWriter().println("Failed to update or insert grant access. Account ID mismatch.");
-                    } else {
-                        Account acc_u = new Account(accountID1, fullName1, password1, email1, phone1, status1);
-                        Boolean updateSuccessful = AccRepo.updateAccount(acc_u);
-
-                        if (updateSuccessful) {
+                    if(!updateId.equals(accountID1)){
+                        resp.getWriter().println("Create failed !!!");
+                    }else {
+                        Account acc_update = new Account(accountID1, fullName1, password1, email1, phone1, status1);
+                        Boolean update_acc = AccRepo.updateAccount(acc_update);
+                        if (update_acc) {
                             List<Account> allAccounts = AccRepo.getAllAccount();
                             req.setAttribute("dashboard", allAccounts);
                             RequestDispatcher dispatcher = req.getRequestDispatcher("dashboard.jsp");
                             dispatcher.forward(req, resp);
                         } else {
-                            resp.getWriter().println("Failed to update account.");
+                            resp.getWriter().println("Create failed !!!");
                         }
+                    }
+                    break;
+                case "UpdateGrant":
+                    if (selectedAcc != null && selectedRole != null) {
+                        boolean updateSuccessful = grantRepo.updateOrInsertGrantAccess(selectedAcc, selectedRole);
+                        if (updateSuccessful) {
+                            permission(req, resp);
+                        } else {
+                            resp.getWriter().println("Failed to update or insert grant access.");
+                        }
+                    } else {
+                        resp.getWriter().println("Invalid input parameters.");
                     }
                     break;
                 case "ReadRole":

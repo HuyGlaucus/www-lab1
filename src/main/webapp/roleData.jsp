@@ -32,12 +32,7 @@
         </c:forEach>
         </tbody>
     </table>
-    <button type="button" class="btn btn-success" onclick="goBack()">Quay lại</button>
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+    <a href="dashboard.jsp" class="btn btn-success" >Quay lại</a>
 </div>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

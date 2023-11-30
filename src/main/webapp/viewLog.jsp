@@ -19,7 +19,7 @@
     }
   </style>
 </head>
-<body>
+<body class="container mt-5">
 <h1>View Log</h1>
 <table border="1">
   <tr>
