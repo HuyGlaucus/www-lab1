@@ -25,8 +25,12 @@ Xóa tài khoản huy
 ![image](https://github.com/HuyGlaucus/www-lab1/assets/116423850/e8037044-4de4-4609-9ea3-8bf127671df8)
 ![image](https://github.com/HuyGlaucus/www-lab1/assets/116423850/30588dcb-7f90-47e7-b278-4ec9879f6706)
 Update tài khoản huy12
-![image](https://github.com/HuyGlaucus/www-lab1/assets/116423850/2c30cfd6-ae07-4a2f-b3af-f9744c0d91b2)
-![image](https://github.com/HuyGlaucus/www-lab1/assets/116423850/71f86073-3058-46f4-8e90-32e15d241609)
+![image](https://github.com/HuyGlaucus/www-lab1/assets/116423850/7d1a2569-8a35-4a66-9f05-c9351aaa1681)
+![image](https://github.com/HuyGlaucus/www-lab1/assets/116423850/c3e81d9a-5581-4ae2-a45f-fdd03447101a)
+![image](https://github.com/HuyGlaucus/www-lab1/assets/116423850/be8b70b8-011f-4267-8d29-4e5e2d210529)
+
+
+
 
 
 
