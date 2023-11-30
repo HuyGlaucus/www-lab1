@@ -1,5 +1,5 @@
 # www-lab1
-#Phần bài làm ở nhánh Update 2
+Phần bài làm ở nhánh Update 2
 Login
 ![image](https://github.com/HuyGlaucus/www-lab1/assets/116423850/3f21641d-46a3-4f5b-8fc5-59d1edac8bdc)
 Thông tin tài khoản 
